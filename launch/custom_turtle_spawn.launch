@@ -1,0 +1,8 @@
+<launch>
+    <rosparam command="load" file="$(find custom_turtle_spawn_pkg)/config.yaml" />
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim1" respawn="true" output="screen" />
+    <node pkg="custom_turtle_spawn_pkg" type="tf_broadcaster1" name="tf_broadcaster1" output="screen" />
+    <node pkg="custom_turtle_spawn_pkg" type="tf_broadcaster2" name="tf_broadcaster2" output="screen" />
+    <node pkg="custom_turtle_spawn_pkg" type="tf_listener" name="tf_listener" output="screen" />
+    <node pkg="custom_turtle_spawn_pkg" type="subscriber" name="subscriber" output="screen" />
+</launch>
